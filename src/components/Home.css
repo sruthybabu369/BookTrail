@@ -1,0 +1,128 @@
+/* src/components/Home.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-image: url('/assets/booktrail.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* .home-background {
+  background-image: url('/assets/booktrail.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.home-container {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.708);
+  /* Subtle overlay for text readability */
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.home-header {
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 3em;
+  color: #3f51b5;
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-section {
+  margin-bottom: 40px;
+}
+
+.search-section h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.search-input {
+  padding: 12px 18px;
+  width: 60%;
+  font-size: 1em;
+  margin-top: 10px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #3f51b5;
+}
+
+.search-button {
+  padding: 12px 30px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #303f9f;
+}
+
+.genre-section h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.genre-section p {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.explore-genres {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #f50057;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.explore-genres:hover {
+  background-color: #c51162;
+}

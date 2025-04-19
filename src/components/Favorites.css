@@ -1,0 +1,66 @@
+/* src/components/Favorites.css */
+
+.favorites {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .favorites h4 {
+    font-size: 2em;
+    color: #3f51b5;
+    margin-bottom: 20px;
+  }
+  
+  .favorites ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .favorites li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .favorites li:hover {
+    transform: scale(1.02);
+  }
+  
+  .favorites span {
+    font-size: 1.1em;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .favorites span:hover {
+    color: #3f51b5;
+  }
+  
+  .favorites button {
+    padding: 5px 15px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #f50057;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .favorites button:hover {
+    background-color: #d5004e;
+  }
+  

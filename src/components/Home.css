@@ -6,14 +6,18 @@
   box-sizing: border-box;
 }
 
-/* body {
+body {
   font-family: Arial, sans-serif;
   color: #333;
-  background-image: url('/assets/booktrail.jpg');
+  background: linear-gradient(
+      rgba(101, 82, 82, 0.603), 
+      rgba(0, 0, 0, 0.453)
+    ),
+    url('./assets/booktrail.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-} */
+}
 
 /* .home-background {
   background-image: url('/assets/booktrail.jpg');
@@ -30,7 +34,7 @@
 .home-container {
   text-align: center;
   padding: 60px 20px;
-  background-color: rgba(255, 255, 255, 0.708);
+  /* background-color: rgba(255, 255, 255, 0.708); */
   /* Subtle overlay for text readability */
   border-radius: 8px;
   max-width: 800px;

@@ -9,27 +9,10 @@
 body {
   font-family: Arial, sans-serif;
   color: #333;
-  background: linear-gradient(
-      rgba(101, 82, 82, 0.603), 
-      rgba(0, 0, 0, 0.453)
-    ),
-    url('./assets/booktrail.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
-/* .home-background {
-  background-image: url('/assets/booktrail.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  min-width: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+
 
 .home-container {
   text-align: center;
@@ -111,7 +94,7 @@ body {
 
 .genre-section p {
   font-size: 1em;
-  color: #777;
+  color: #433e3e;
   margin-bottom: 20px;
 }
 

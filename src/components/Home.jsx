@@ -1,10 +1,21 @@
 // src/components/Home.jsx
 import React from 'react'
-import './Home.css'  // Styling specific to the Home page
+import './Home.css'
+import bgImage from '../assets/booktrail.jpg';  // Styling specific to the Home page
 
 function Home() {
   return (
-  
+    <div
+      className="home-background"
+      style={{
+        backgroundImage: `linear-gradient(rgba(101, 82, 82, 0), rgba(0, 0, 0, 0.453)), url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        width: '100%',
+      }}
+    >
     <div className="home-container">
       <header className="home-header">
         <h1>Welcome to BookTrail</h1>
@@ -23,7 +34,7 @@ function Home() {
         </div>
       </section>
     </div>
-  
+  </div>
   )
 }
 

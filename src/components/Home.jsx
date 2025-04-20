@@ -8,12 +8,14 @@ function Home() {
     <div
       className="home-background"
       style={{
-        backgroundImage: `linear-gradient(rgba(101, 82, 82, 0), rgba(0, 0, 0, 0.453)), url(${bgImage})`,
+        backgroundImage: `linear-gradient(rgb(244, 235, 235), rgba(0, 0, 0, 0.453)), url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        minHeight: '100vh',
+        minHeight: '50vh',
         width: '100%',
+        
+        
       }}
     >
     <div className="home-container">

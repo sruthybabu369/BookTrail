@@ -1,19 +1,20 @@
 // src/components/Navbar.jsx
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css'; // 💡 Import the new CSS file
 
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2>BookTrail</h2>
-      <ul>
-        <Link to="/">Home</Link>
-        <li><Link to="/">Search</Link></li>
+      <div className="navbar-brand">
+        <Link to="/">BookTrail</Link>
+      </div>
+      <ul className="navbar-links">
         <li><Link to="/genres">Genres</Link></li>
         <li><Link to="/favorites">Favorites</Link></li>
       </ul>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

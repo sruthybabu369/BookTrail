@@ -75,4 +75,26 @@ body {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
-  
+ 
+.book-card {
+  background: linear-gradient(145deg, #3f51b5, #5c6bc0);
+  color: white;
+  padding: 16px 12px;
+  border-radius: 10px;
+  width: 180px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+}
+
+.book-card p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

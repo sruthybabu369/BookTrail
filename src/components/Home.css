@@ -7,23 +7,22 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: #333;
-
+  font-family: 'Poppins', sans-serif; /* Clean and modern */
+  color: #2e2e2e;
+  background-color: #f9f9f9;
 }
 
 
 
 .home-container {
   text-align: center;
-  padding: 60px 20px;
-  
-  border-radius: 8px;
-  max-width: 800px;
-  max-height: 9%;
-  
-  margin: 0 auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 60px 30px;
+  border-radius: 20px;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  margin: 50px auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .home-header {
@@ -31,14 +30,17 @@ body {
 }
 
 .home-header h1 {
-  font-size: 3em;
-  color: #3f51b5;
-  margin-bottom: 10px;
+  font-size: 3.0em;
+  color: #1a237e;
+  font-weight: 700;
+  letter-spacing: 1.2px;
 }
 
 .home-header p {
-  font-size: 1.2em;
-  color: #555;
+  font-size: 1.1em;
+  color: #444;
+  font-weight: 400;
+  margin-top: 10px;
 }
 
 .home-content {
@@ -51,51 +53,53 @@ body {
   margin-bottom: 40px;
 }
 
-.search-section h2 {
+.search-section h2,
+.genre-section h2 {
   font-size: 2em;
-  color: #333;
+  color: #212121;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .search-input {
-  padding: 12px 18px;
-  width: 60%;
+  padding: 14px 20px;
+  width: 65%;
   font-size: 1em;
   margin-top: 10px;
-  border-radius: 25px;
-  border: 1px solid #ddd;
+  border-radius: 30px;
+  border: none;
   outline: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: border-color 0.3s;
+  background-color: #fff;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .search-input:focus {
-  border-color: #3f51b5;
+  box-shadow: 0 0 0 3px #7986cb;
 }
 
 .search-button {
   padding: 12px 30px;
   font-size: 1em;
+  font-weight: 500;
   color: #fff;
-  background-color: #3f51b5;
+  background-color: #3949ab;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
   margin-top: 15px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .search-button:hover {
-  background-color: #303f9f;
+  background-color: #283593;
 }
 
-.genre-section h2 {
-  font-size: 2em;
-  color: #333;
-}
+
 
 .genre-section p {
   font-size: 1em;
-  color: #433e3e;
+  color: #5c5c5c;
   margin-bottom: 20px;
 }
 
@@ -103,14 +107,16 @@ body {
   display: inline-block;
   padding: 12px 30px;
   font-size: 1em;
+  font-weight: 500;
   color: #fff;
-  background-color: #f50057;
-  border-radius: 25px;
+  background-color: #e91e63;
+  border-radius: 30px;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
+
 .explore-genres:hover {
-  background-color: #c51162;
+  background-color: #ad1457;
 }

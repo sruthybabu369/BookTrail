@@ -27,8 +27,17 @@ function App() {
       const updatedFavorites = [...favorites, book];
       setFavorites(updatedFavorites);
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-      
-      // Clear selected book after adding to favorites
+      setSelectedBook(null);
+    }
+  };
+
+  // 🔥 NEW: Handle removing a favorite
+  const handleRemoveFavorite = (bookKey) => {
+    const updatedFavorites = favorites.filter((book) => book.key !== bookKey);
+    setFavorites(updatedFavorites);
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+    // Optional: reset selected book if it was removed
+    if (selectedBook && selectedBook.key === bookKey) {
       setSelectedBook(null);
     }
   };
@@ -41,7 +50,7 @@ function App() {
           <BookDetails
             book={selectedBook}
             onBack={() => setSelectedBook(null)}
-            onFavorite={addToFavorites} // Pass the addToFavorites function
+            onFavorite={addToFavorites}
           />
         ) : (
           <Routes>
@@ -50,7 +59,13 @@ function App() {
             <Route path="/genres" element={<GenreList onSelectBook={handleSelectBook} />} />
             <Route
               path="/favorites"
-              element={<Favorites favorites={favorites} onSelectBook={handleSelectBook} />}
+              element={
+                <Favorites
+                  favorites={favorites}
+                  onSelectBook={handleSelectBook}
+                  onRemoveFavorite={handleRemoveFavorite} // ✅ pass the new prop
+                />
+              }
             />
           </Routes>
         )}

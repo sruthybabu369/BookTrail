@@ -1,14 +1,7 @@
-// src/components/Favorites.jsx
-import React from 'react'
-import './Favorites.css'
+import React from 'react';
+import './Favorites.css';
 
-function Favorites({ favorites, onSelectBook }) {
-  const removeFavorite = (bookKey) => {
-    const updatedFavorites = favorites.filter((book) => book.key !== bookKey);
-    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-    onSelectBook(null); // Reset selected book
-  };
-
+function Favorites({ favorites, onSelectBook, onRemoveFavorite }) {
   return (
     <div className="favorites">
       <h4>Your Favorite Books</h4>
@@ -16,7 +9,7 @@ function Favorites({ favorites, onSelectBook }) {
         {favorites.map((book) => (
           <li key={book.key}>
             <span onClick={() => onSelectBook(book)}>{book.title}</span>
-            <button onClick={() => removeFavorite(book.key)}>Remove</button>
+            <button onClick={() => onRemoveFavorite(book.key)}>Remove</button>
           </li>
         ))}
       </ul>

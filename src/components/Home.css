@@ -17,7 +17,7 @@ body {
 .home-container {
   text-align: center;
   padding: 60px 30px;
-  border-radius: 20px;
+  border-radius: 15px;
   max-width: 900px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);

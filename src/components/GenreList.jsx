@@ -1,32 +1,39 @@
-// src/components/GenreList.jsx
-import React, { useState, useEffect } from 'react'
-import './GenreList.css'
+import React, { useState, useEffect } from 'react';
+import './GenreList.css';
 
-const genres = ['Science Fiction', 'Romance', 'Mystery', 'History', 'Fantasy', 'Horror']
+// Map display names to valid Open Library subject keys
+const genreMap = {
+  'Science Fiction': 'science_fiction',
+  'Romance': 'romance',
+  'Mystery': 'mystery',
+  'History': 'history',
+  'Fantasy': 'fantasy',
+  'Horror': 'horror'
+};
 
 function GenreList({ onSelectBook }) {
-  const [genreBooks, setGenreBooks] = useState({})
+  const [genreBooks, setGenreBooks] = useState({});
 
   useEffect(() => {
-    genres.forEach((genre) => {
-      fetch(`https://openlibrary.org/subjects/${genre.toLowerCase()}.json`)
+    Object.entries(genreMap).forEach(([displayName, subjectKey]) => {
+      fetch(`https://openlibrary.org/subjects/${subjectKey}.json`)
         .then((response) => response.json())
         .then((data) => {
-          setGenreBooks((prev) => ({ ...prev, [genre]: data.works }))
+          setGenreBooks((prev) => ({ ...prev, [displayName]: data.works }));
         })
-        .catch((error) => console.error('Error fetching genre data:', error))
-    })
-  }, [])
+        .catch((error) => console.error(`Error fetching ${displayName}:`, error));
+    });
+  }, []);
 
   return (
     <div className="genre-list">
       <h4>Discover Books by Genre</h4>
-      {genres.map((genre) => (
+      {Object.keys(genreMap).map((genre) => (
         <div key={genre}>
           <h5>{genre}</h5>
           <div className="genre-books">
             {genreBooks[genre]?.slice(0, 5).map((book) => (
-              <div key={book.key} onClick={() => onSelectBook(book)}>
+              <div key={book.key} onClick={() => onSelectBook(book)} className="book-card">
                 <p>{book.title}</p>
               </div>
             ))}
@@ -34,7 +41,7 @@ function GenreList({ onSelectBook }) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default GenreList
+export default GenreList;
